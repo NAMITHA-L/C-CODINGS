@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,n;
+    n=5;
+    for (i=0;i<n;i++)// from 0 to till 5 it will iterate//
+    {
+        cout<<"HELLO WORLD"<<endl;//endl used to end the line os that your next code will be executed in tthe next line//
+    }
+    return 0;
+}
