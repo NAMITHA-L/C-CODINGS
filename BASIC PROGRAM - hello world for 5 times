@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"HELLO WORLD"<<endl;//endl used to end the line os that your next code will be executed in tthe next line//
+    cout<<"HELLO WORLD"<<endl;
+    cout<<"HELLO WORLD"<<endl;
+    cout<<"HELLO WORLD"<<endl;
+    cout<<"HELLO WORLD"<<endl;
+    return 0;
+}
