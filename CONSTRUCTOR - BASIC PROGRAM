@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+class Test 
+{   //no access specifier is mentioned so by default it is private.
+    int a;
+    public:
+    Test()//CONSTRUCTOR USUALLY HAVE THE SAME NAME AS THE CLASS NAME , here we used default constructor
+    {
+        a = 5;
+        cout<<"The constructor is called"<<endl;
+    }
+};
+int main()
+{
+    Test t1;// object initialization
+    return 0;
+}
