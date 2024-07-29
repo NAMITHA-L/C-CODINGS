@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   int a,b;
+   cout<<"Enter two numbers:"<<endl;
+   cin>>a>>b;
+   if ( a%2 == 0 & b%2 == 0)
+   {
+       cout<<"The number "<<a<<" and "<<b<< " is even."<<endl;
+   }
+   else if (a%2 == 0 &  b%2 != 0)
+   {
+       cout<<"The number "<<a<<" is even and the number "<<b<<" is odd"<<endl;
+   }
+   else if (a%2 != 0 &  b%2 != 0)
+   {
+       cout<<"The numbers are odd "<<endl;
+   }
+   else
+   {
+       cout<<"the number "<<b<<" is even and the number "<<a<<" is odd"<<endl;
+   }
+    return 0;
+}
+
