@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class shape
+{
+    public:
+    int radius;
+    void area();
+};
+class circle:public shape
+{
+    public:
+    int radius;
+    void area()
+    {
+        int a;
+        cout<<"enter the radius:"<<endl;
+        cin>>radius;
+        a = radius*radius;
+        cout <<"the radius of the circle is:"<<a<<endl;
+    }
+};
+class cylinder:public circle
+{
+    public:
+    int height;
+    void area()
+    {
+        int b;
+        cout<<"\nenter the height and the radius:"<<endl;
+        cin>>height>>radius;
+        b = (22/7)*radius*radius*height;
+        cout<<"the area of cylinder is :"<<b<<endl;
+    }
+};
+int main()
+{
+    circle c;
+    c.area();
+    cylinder cy;
+    cy.area();
+    return 0;
+}
+
+
