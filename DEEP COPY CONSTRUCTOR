@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+ class demo
+ { 
+     int a;
+     int b; 
+     int *p;
+     public:
+     demo ()
+     { 
+         p = new int;
+         
+     }
+     void setdata(int x, int y ,int z)
+     { a=x;
+       b=y;
+       *p=z;
+     }
+     void showdata()
+     { cout<<" a is "<<a;
+       cout<<", b is:"<<b;
+       cout<<", *p is:"<<*p;
+     }
+ };
+     int main()
+     { 
+         demo d1;
+         d1.setdata(4,5,7);
+         demo d2=d1;
+         d2.showdata();
+         return 0;
+     }
+// THE OUTPUT IS : a is 4, b is 5, *p is 7 //
