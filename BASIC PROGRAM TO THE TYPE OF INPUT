@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    char ch;
+    cout << "Enter the character: " << endl;
+    cin >> ch;
+
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+        char uppercaseCh = toupper(ch); // Convert to uppercase for vowel check
+        if (uppercaseCh == 'A' || uppercaseCh == 'E' || uppercaseCh == 'I' ||
+            uppercaseCh == 'O' || uppercaseCh == 'U') {
+            cout << "THE CHARACTER IS VOWEL" << endl;
+        } else {
+            cout << "The character is consonant" << endl; // Corrected message
+        }
+    } else if (ch >= '0' && ch <= '9') {
+        cout << "The character is a digit" << endl; // Corrected message
+    } else {
+        cout << "The character is a symbol" << endl; // Corrected message
+    }
+
+    return 0;
+}
+
+
