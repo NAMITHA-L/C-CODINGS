@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class dyncons
+{
+int *p;
+public:
+dyncons()
+{
+p = new int;
+*p=10;
+}
+dyncons(int v)
+{ 
+p = new int;
+*p=v;
+}
+void dis()
+{ 
+cout<<  *p;
+}
+};
+int  main()
+{
+ dyncons o;
+ dyncons o1(9);
+ o.dis();
+ o1.dis();
+ return 0;
+ }
