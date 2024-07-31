@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class vehicle
+{
+    public:
+    string make;
+    string model;
+    int year;
+};
+class car:public vehicle
+{
+    public:
+    void car_details()
+    {
+        cout<<"enter by whom car made:"<<endl;
+        cin>>make;
+        cout<<"enter car model:"<<endl;
+        cin>>model;
+        cout<<"enter the year when car made:"<<endl;
+        cin>>year;   
+        cout<<"The car was made by "<<make<<" of model "<<model<<" in the year."<<year<<endl;  
+    }
+};
+int main()
+{
+        car c1;
+        c1.car_details();
+        return 0;
+}
