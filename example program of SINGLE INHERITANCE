@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class person
+{
+    public:
+    string name;
+    int age;
+};
+class employee:public person
+{
+    public:
+     int employee_id;
+     int salary;
+     void employee_details()
+     {
+         cout<<"EMPLOYEE NAME:"<<endl;
+         cin>>name;
+         cout<<"EMPLOYEE AGE :"<<endl;
+         cin>>age;
+         cout<<"EMPLOYEE ID :"<<endl;
+         cin>>employee_id;
+         cout<<"EMPLOYEE SALARY :"<<endl;
+         cin>>salary;
+         
+         cout<<"EMPLOYEE ID "<<employee_id<<" AND NAME "<<name<<" IS OF AGE "<<age<<" WITH SALARY "<<salary;
+    }
+};
+int main()
+{
+    employee e1;
+    e1.employee_details();
+    return 0;
+}
