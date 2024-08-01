@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class Mammal
+{
+    public:
+    void print_data_mammal()
+    {
+        cout<<"I am Mammal"<<endl;
+    }
+};
+class MarineAnimal
+{
+    public:
+    void print_data_marineanimal()
+    {
+        cout<<"I am MarineAnimal"<<endl;
+    }
+};
+class BlueWhale : public Mammal, public MarineAnimal
+{
+    public:
+    void print_data_bluewhale()
+    {
+        cout<<"I belong to both the categories: Mammals as well as Marine Animals"<<endl;
+    }
+};
+int main()
+{
+    Mammal m1;
+    m1.print_data_mammal();
+    MarineAnimal m2;
+    m2.print_data_marineanimal();
+    BlueWhale bw1;
+    bw1.print_data_bluewhale();
+    bw1.print_data_mammal();
+    bw1.print_data_marineanimal();
