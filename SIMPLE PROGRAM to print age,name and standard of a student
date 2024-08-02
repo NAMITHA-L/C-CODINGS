@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class Student
+{
+    int age;
+    string fname;
+    string lname;
+    int std;
+    public:
+    
+        void showdata()
+        {
+            cin>>age>>fname>>lname>>std;
+            cout<<age<<endl;
+            cout<<lname<<", "<<fname<<endl;
+            cout<<std<<"\n"<<endl;
+            cout<<age<<","<<fname<<","<<lname<<","<<std<<endl;
+            
+        }
+    
+};
+int main()
+{
+    Student s1;
+    s1.showdata();
+    return 0;
+}
