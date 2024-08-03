@@ -1,0 +1,26 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int* arr = new int[n]; // dynamically allocate memory for the array
+
+    // read integers from standard input and store them in the array
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    // print the array in reverse order
+    for (int i = n - 1; i >= 0; i--) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    delete[] arr; // don't forget to free dynamically allocated memory!
+    return 0;
+}
