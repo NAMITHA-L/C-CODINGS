@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class prime_number
+{
+    private:
+    int n;
+    public:
+    void prime_check()
+    {
+        cout<<"ENTER THE NUMBER:"<<endl;
+        cin>>n;
+        if (n==1)
+        {cout<<"THE NUMBER 1 IS NEITHER PRIME NOR COMPOSITE NUMBER"<<endl;}
+        else
+        {   int i,count;
+            for (i=2;i<=n;i++)
+            {
+            if (n%i == 0)
+                {count=count+1;}
+                
+            }
+             if (count>1)
+                {cout<<"THE ENTERED NUMBER IS COMPOSITE"<<endl;}
+            else
+            {cout<<"THE ENTERED NUMBER IS PRIME"<<endl;}
+            
+            
+        }
+    }
+};
+int main ()
+{
+    prime_number p1;
+    p1.prime_check();
+    return 0;
+}
