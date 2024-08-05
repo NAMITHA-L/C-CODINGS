@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+class Base
+{
+    public:
+    virtual void dis()
+    {
+        cout<<"base class"<<endl;
+    }
+};
+
+class derived:public Base
+{
+ public:
+ void dis()
+ {
+     cout<<"derived class"<<endl;
+ }
+};
+
+int main()
+{
+    Base *a;
+    derived d;
+    a = &d;
+    a -> dis();
+    return 0;
+    
+}
+
+
+// OUTPUT: derived class
