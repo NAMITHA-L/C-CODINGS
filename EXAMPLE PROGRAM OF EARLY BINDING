@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+class Base
+{
+    public:
+    void dis()
+    {
+        cout<<"base class"<<endl;
+    }
+};
+
+class derived:public Base
+{
+ public:
+ void dis()
+ {
+     cout<<"derived class"<<endl;
+ }
+};
+
+int main()
+{
+    Base *a;
+    derived d;
+    a = &d;
+    a -> dis();
+    return 0;
+    
+}
+// OUTPUT: base class
+
+// though the  object of base clase points to the  object of derived class, the compiler perform early binding and print the output as "base class"
