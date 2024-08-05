@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+class Animals
+{
+    public:
+    virtual void food()
+    {
+        cout<<"food of the animal is ..."<<endl;
+    }
+};
+
+class dog:public Animals
+{
+ public:
+ void food()
+ {
+     cout<<"pedigree"<<endl;
+ }
+};
+
+class cat:public Animals
+{
+ public:
+ void food()
+ {
+     cout<<"fish"<<endl;
+ }
+};
+
+int main()
+{
+    Animals*a;
+    dog d;
+    a = &d;
+    a -> food();
+    cat c;
+    c.food();
+    return 0;
+    
+}
+// output:pedigree
+//        fish
+// if I removed virtual keyword then the statement of animal class and cat base class will be executed.
