@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class armstng_no {
+private:
+    int n;
+public:
+    void armstrng() {
+        cout << "Enter the number:" << endl;
+        cin >> n;
+        int count, r, p, sum, i;
+        count = 1;
+        sum = 0;
+        for (i = n; i > 0; i /= 10) {
+            count = count + 1;
+        }
+        for (i = n; i > 0; i /= 10) {
+            r = i % 10;
+            p = pow(r, count);
+            sum = sum + p;
+        }
+        if (n == sum) {
+            cout << "It is an Armstrong number" << endl;
+        }
+        else {
+            cout << "Not an Armstrong number" << endl;
+        }
+    }
+};
+
+int main() {
+    armstng_no a1;
+    a1.armstrng();
+    return 0;
+}
