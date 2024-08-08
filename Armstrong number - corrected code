@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class ArmstrongNumber {
+private:
+    int n;
+
+public:
+    void armstrng() {
+        cout << "Enter a number: ";
+        cin >> n;
+
+        int sum = 0;
+        int temp = n;
+        int count = 0;
+
+        // Calculate the number of digits in the number
+        while (temp != 0) {
+            temp /= 10;
+            count++;
+        }
+
+        temp = n;
+        while (temp != 0) {
+            int digit = temp % 10;
+            sum += pow(digit, count);
+            temp /= 10;
+        }
+
+        if (n == sum) {
+            cout << "It is an Armstrong number." << endl;
+        } else {
+            cout << "Not an Armstrong number." << endl;
+        }
+    }
+};
+
+int main() {
+    ArmstrongNumber a1;
+    a1.armstrng();
+    return 0;
+}
