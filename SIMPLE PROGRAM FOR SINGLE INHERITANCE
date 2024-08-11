@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+class A 
+{
+    public:
+    int a;
+    int b;
+
+    int mul()
+    {
+        int multiply;
+        multiply = a*b;
+        return multiply;
+    }
+};
+
+class B:private A
+{
+    public:
+    void display()
+    {
+        A obj; // Create an object of class A
+        int result = obj.mul(); // Access the member function mul() of class A
+        cout<<result<<endl;
+    }
+};
+
+int main()
+{
+    int a, b;
+    cout<<"enter a and b"<<endl;
+    cin>>a>>b;
+
+    B bobj; // Create an object of class B
+    bobj.display();
+
+    return 0;
+}
