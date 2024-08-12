@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+class triangle
+{
+  int side1;
+  int side2;
+  int side3;
+
+    public:
+    
+    void setdata()
+    {
+    cout<<"enter the sides:"<<endl;
+    cin>>side1>>side2>>side3;
+    }
+    void triangletype()
+    {
+        if(side1==side2 && side2==side3 && side3==side1)
+        {
+            cout<<"it is equilateral traingle"<<endl;
+        }
+        else if(side1==side2 || side2==side3 || side3==side1)
+        {
+            cout<<"it is a isoceles traingle"<<endl;
+        }
+        else
+        {
+            cout<<"it is scalene triangle"<<endl;
+        }
+    }
+    
+    
+};
+int main()
+{
+    triangle t1;
+    t1.setdata();
+    t1.triangletype();
+    return 0;
+    
+}
