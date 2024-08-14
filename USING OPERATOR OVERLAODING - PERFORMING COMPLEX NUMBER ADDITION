@@ -1,0 +1,50 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+class Complex {
+public:
+    double real;
+    double imag;
+
+    Complex(double r = 0, double i = 0) : real(r), imag(i) {}
+
+    // Overload operator +
+    Complex operator+(const Complex& other) const {
+        return Complex(real + other.real, imag + other.imag);
+    }
+
+    // Overload operator <<
+    friend ostream& operator<<(ostream& os, const Complex& c) {
+        if (c.imag >= 0)
+            os << c.real << "+i" << c.imag;
+        else
+            os << c.real << "-i" << -c.imag;
+        return os;
+    }
+
+    // Overload operator >>
+    friend istream& operator>>(istream& is, Complex& c) {
+        char sign, i;
+        is >> c.real >> sign >> i >> c.imag;
+        if (sign == '-') {
+            c.imag = -c.imag;
+        }
+        return is;
+    }
+};
+
+int main() {
+    Complex c1, c2;
+
+    // Read two complex numbers from input
+    cin >> c1 >> c2;
+
+    // Compute the sum of the two complex numbers
+    Complex c3 = c1 + c2;
+
+    // Output the result
+    cout << c3 << endl;
+
+    return 0;
+}
