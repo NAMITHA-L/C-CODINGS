@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+class circle {
+private:
+    int radius;
+public:
+    circle() {
+        cout << "Enter the radius: ";
+        cin >> radius;
+    }
+    void cal_area() {
+        cout << "The area is: " << (22/7)*radius*radius << endl;
+    }
+    void cal_circumference() {
+        cout << "The circumference is: " << 2*(22/7)*radius << endl;
+    }
+};
+
+int main() {
+    circle c;
+    c.cal_area();
+    c.cal_circumference();
+    return 0;
+}
