@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class traingle
+{
+    int b,h;
+    public:
+    void area()
+    {
+    cout<<"enter the breadth and height of the triangle"<<endl;
+    cin>>b>>h;
+    cout<<"the area of the triangle is:"<<endl;
+    double c=0.5*b*h;
+    cout<<c;
+    }
+};
+int main()
+{
+    traingle t;
+   
+    t.area();
+    return 0;
+}
