@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class Alphabet
+{
+    char n;
+    public:
+    void vowel_checker()
+    {
+        cout<<"enter the Alphabet:"<<endl;
+        cin>>n;
+        if ( n== 'a' || n=='e' ||n=='i' ||n=='o' ||n=='u')
+        cout<<"it is vowel"<<endl;
+        else
+        {cout<<"it is a consonant"<<endl;}
+    }
+};
+int main()
+{
+    Alphabet a;
+    a.vowel_checker();
+    return 0;
+}
