@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+class Mark
+{
+    int m1,m2,m3,m4,m5;
+    public:
+    void percentage_claculation()
+    {
+        int pc = 0;
+        cout<<"Enter the marks for 5 subjects:"<<endl;
+        cin>>m1>>m2>>m3>>m4>>m5;
+        pc = (m1+m2+m3+m4+m5)/5;
+        cout<<"the percentage is : "<<pc<<endl;
+    }
+};
+int main()
+{
+    Mark m;
+    m.percentage_claculation();
+    return 0;
+}
