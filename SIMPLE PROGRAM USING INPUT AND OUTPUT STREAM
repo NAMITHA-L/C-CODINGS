@@ -1,0 +1,20 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    ofstream fout;
+    fout.open("myfile.dat");
+    fout<<"i a m  n a m i t h a ";
+    fout.close();
+    ifstream fin;char ch;
+    fin.open("myfile.dat")
+    fin>>ch;
+    while (!fin.eof())
+    {
+        cout<<ch;
+        fin>>ch;
+    }
+    fin.close();
+}
+
