@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    int id;
+    string name;
+    public:
+    friend void operator >>(istream &in, student &s)
+    {
+        cout<<"enter student name"<<endl;
+        cin>>s.name;
+        cout<<"enter the id:"<<endl;
+        cin>>s.id;
+    }
+    friend void operator <<(ostream &out, student &s)
+    {
+        cout<<"the student name is :"<<s.name<<endl;
+        cout<<"the id is:"<<s.id;
+    }
+};
+int main()
+{
+    student s1;
+    cin>>s1;
+    cout<<s1;
+    return 0;
+}
