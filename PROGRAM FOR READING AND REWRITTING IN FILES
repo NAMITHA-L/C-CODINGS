@@ -1,0 +1,31 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    ofstream fout;
+    fout.open("myfile.dat");
+    fout<<"I'm Namitha "<<endl;
+    fout.close();
+    ifstream fin;
+    char ch;
+    fin.open("myfile.dat");
+    fin.get(ch);
+    while(!fin.eof())
+    {
+        cout<<ch;
+        fin.get(ch);
+    }
+    fin.close();
+    fout.open("myfile.dat ",ios::ate);
+    fout<<" I'm a github user"<<endl;
+    fout.close();
+    fin.open("myfile.dat");
+    fin.get(ch);
+    while(!fin.eof())
+    {
+        cout<<ch;
+        fin.get(ch);
+    }
+    fin.close();
+}
