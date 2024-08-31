@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class operation
+{
+public:
+int a,b;
+void get();
+void sum();
+void difference();
+};
+int main ()
+{
+    operation o;
+    o.get();
+    o.sum();
+    o.difference();
+    return 0;
+}
+inline void operation :: get()
+{
+    cout<<"enter a and b"<<endl;
+    cin>>a>>b;
+}
+inline void operation :: sum()
+{
+    cout<<"addition value is:\t"<<a+b<<endl;
+}
+inline void operation :: difference()
+{
+    cout<<"subtraction value is:\t"<<a-b<<endl;
+}
