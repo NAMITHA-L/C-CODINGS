@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class demo
+{
+    private:
+    int a,b,*p;
+    public:
+    demo()//default constructor
+    {
+        p = new int;
+        cout<<"constructor called"<<endl;
+    }
+    demo( demo & d)//  constructor
+    {
+        a = d.a;
+        b=d.b;
+        p = new int;
+        *p = *(d.p);
+    }
+    void set(int x,int y ,int z)
+    {
+        a=x;
+        b=y;
+        *p=z;
+    }
+    void show()
+    {
+        cout<<"a is:"<<a<<endl;
+        cout<<"b is:"<<b<<endl;
+        cout<<"*p is:"<<*p<<endl;
+    }
+    ~demo()//deconstructor
+    {
+        cout<<"deconstructor called"<<endl;
+    }
+};
+int main()
+{
+    demo d1;
+    d1.set(4,5,7);
+    demo d2(d1);
+    d2.show();
+    return 0 ;
+}
