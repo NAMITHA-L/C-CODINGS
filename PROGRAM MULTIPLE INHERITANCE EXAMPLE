@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class  A 
+{
+    protected:
+    int a;
+    public:
+    A()
+    {
+        a = 10;
+    }
+};
+class B
+{
+    protected:
+    int b;
+    public:
+    B()
+    {
+        b = 70;
+    }
+};
+class C: public A, public B
+{
+    protected:
+    int c;
+    public:
+    void add()
+    {
+    c = a+ b ;
+    cout<<"addition is "<<c<<endl;
+    
+}
+};
+int main()
+{
+    C c1;
+    c1.add();
+    return 0;
+}
