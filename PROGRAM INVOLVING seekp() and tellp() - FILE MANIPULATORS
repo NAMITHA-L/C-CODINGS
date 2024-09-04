@@ -1,0 +1,23 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    ofstream fout;
+    ifstream fin;
+    char ch;
+    fout.open("myfile.data",ios::app);
+    fout<<"I'm a girl"<<endl;
+    cout<<fout.tellp();
+    fout.seekp(4);
+    fout<<" new to cs";
+    fout.close();
+    fin.open("myfile.data");
+    fin>>ch;
+    while(!fin.eof())
+    {
+        cout<<ch;
+        fin>>ch;
+    }
+    fin.close();
+}
