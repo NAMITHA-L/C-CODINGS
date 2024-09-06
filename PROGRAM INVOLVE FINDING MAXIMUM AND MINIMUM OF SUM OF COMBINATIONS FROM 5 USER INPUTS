@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    long long q, w, e, r, t; // Use long long for large integers
+    cin >> q >> w >> e >> r >> t;
+
+    long long total = q + w + e + r + t; // Total sum
+
+    // Calculate the sum of four integers
+    long long a = total - q;
+    long long s = total - w;
+    long long d = total - e;
+    long long f = total - r;
+    long long g = total - t;
+
+    // Find minimum and maximum sums
+    long long l_n = max({a, s, d, f, g});
+    long long s_n = min({a, s, d, f, g});
+
+    // Output the results
+    cout << s_n << " " << l_n << endl;
+
+    return 0;
+}
