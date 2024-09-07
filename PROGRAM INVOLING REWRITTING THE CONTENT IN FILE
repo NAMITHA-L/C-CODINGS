@@ -1,0 +1,25 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+   ofstream fout;
+   fout.open("myfile");
+   fout<<"hllo"<<endl;
+   fout.close();
+   fout.open("myfile",ios :: in | ios :: out);
+   fout.seekp(1);
+   fout<<"ello";
+   fout.close();
+   ifstream fin;
+   fin.open("myfile");
+   char ch;
+   fin.get(ch);
+   while (!fin.eof())
+   {
+       cout<<ch;
+       fin.get(ch);  
+   }
+   fin.close();
+}
