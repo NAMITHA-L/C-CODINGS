@@ -1,0 +1,19 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+   ofstream fout;
+   fout.open("myfile");
+   fout<<"Welcome to GITHUB "<<endl;
+   fout.close();
+   ifstream fin;
+   char ch;
+   fin.open("myfile");
+   while (fin.tellg() < 10) {
+      fin.get(ch);
+      cout<<ch;
+   }
+   fin.close();
+}
