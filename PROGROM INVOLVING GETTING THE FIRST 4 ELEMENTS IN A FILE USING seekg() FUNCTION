@@ -1,0 +1,24 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+   ofstream fout;
+   fout.open("myfile");
+   fout<<"hello world"<<endl;
+   fout.close();
+   ifstream fin;
+   char ch;
+   fin.open("myfile");
+   int pos=0;
+   while (pos< 4) {
+      fin.seekg(pos);
+      fin.get(ch);
+      cout<<ch<<endl;
+      pos++;
+   }
+   fin.close();
+}
+
+
