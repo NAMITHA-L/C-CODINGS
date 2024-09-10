@@ -1,0 +1,93 @@
+#include<iostream>
+#include<list>
+using namespace std;   
+int main()
+{
+    list <int> list1;
+    list1.push_back(60);//1 function
+    list1.push_front(50);//2 function
+    list1.push_back(70);
+    list1.push_front(40);
+    list1.push_front(30);
+    list1.push_front(20);
+    list1.push_front(10);
+    list1.push_back(80);
+    list1.push_back(90);
+    list1.push_back(100);
+   
+    
+    list<int>::iterator p = list1.begin(); //3 function
+    cout<<"after adding elements to the list"<<endl;
+    while(p!=list1.end()) //4 function
+    {
+        cout<<*p<<endl;
+            p++;
+    
+    }
+    
+    list1.pop_front();//5 function
+    list1.pop_back();//6 function
+    list1.pop_front();
+    list1.pop_back();
+    list1.pop_front();
+    list1.pop_back();
+    list<int>::iterator q = list1.begin();
+    cout<<"after deleting elements to the list"<<endl;
+    while(q!=list1.end())
+    {
+        cout<<*q<<endl;
+            q++;
+    
+    }
+    q = list1.begin();
+    for(int i=0;i<1;i++)
+    {
+        q++;
+    }
+    cout<<"after inserting elements"<<endl;
+    list1.insert(q++,45);//7 function
+    list<int>::iterator b = list1.begin();
+    while(b!= list1.end())
+    {
+        cout<<*b<<endl;
+        b++;
+    }
+    q = list1.end();
+    for(int i=0;i<3;i++)
+    {
+        q++;
+    }
+    cout<<"after deleting elements"<<endl;
+    list1.erase(q);//8 function
+   
+    list<int>::iterator a = list1.begin();
+    while(a!= list1.end())
+    {
+        cout<<*a<<endl;
+        a++;
+    }
+    if (list1.empty())//9 function
+    {
+        cout<<"the list is empty"<<endl;
+    }
+    else
+    {
+        cout<<"The list is not empty and the size is:"<<list1.size()<<endl;//10 function
+        
+    }
+    cout<<"The list begins with the element "; 
+    cout<<*list1.begin()<<" and ends with the element ";
+    cout<<*list1.rbegin()<<endl;
+    cout<<"after clearing:";
+    list1.clear();
+    if (list1.empty())//9 function
+    {
+        cout<<"the list is empty"<<endl;
+    }
+    else
+    {
+        cout<<"The list is not empty and the size is:"<<list1.size()<<endl;//10 function
+        
+    }
+    return 0;
+}
