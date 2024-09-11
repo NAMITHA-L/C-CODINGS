@@ -1,0 +1,99 @@
+#include<iostream>
+#include<vector>
+using namespace std;   
+int main()
+{
+    vector <int> vector1;
+    vector1.push_back(6);//1 function
+    vector1.push_back(150);//2 function
+    vector1.push_back(70);
+    vector1.push_back(40);
+    vector1.push_back(0);
+    vector1.push_back(200);
+    vector1.push_back(180);
+    vector1.push_back(0);
+    vector1.push_back(90);
+    vector1.push_back(10);
+   
+    
+    vector<int>::iterator p = vector1.begin(); //3 function
+    cout<<"after adding elements to the vector"<<endl;
+    while(p!=vector1.end()) //4 function
+    {
+        cout<<*p<<endl;
+            p++;
+    
+    }
+    
+    vector1.pop_back();//5 function
+    vector1.pop_back();//6 function
+    vector1.pop_back();
+    vector1.pop_back();
+    vector1.pop_back();
+    vector1.pop_back();
+    vector<int>::iterator q = vector1.begin();
+    cout<<"after deleting elements to the vector"<<endl;
+    while(q!=vector1.end())
+    {
+        cout<<*q<<endl;
+            q++;
+    
+    }
+    q = vector1.begin();
+    for(int i=0;i<1;i++)
+    {
+        ++q;
+    }
+    cout<<"after inserting elements"<<endl;
+    vector1.insert(q,45);//7 function
+    vector<int>::iterator b = vector1.begin();
+    while(b!= vector1.end())
+    {
+        cout<<*b<<endl;
+        b++;
+    }
+    q = vector1.end();
+    for(int i=0;i<3;i++)
+    {
+        q++;
+    }
+    cout<<"after deleting elements"<<endl;
+    vector1.erase(q);//8 function
+   
+    vector<int>::iterator a = vector1.begin();
+    while(a!= vector1.end())
+    {
+        cout<<*a<<endl;
+        a++;
+    }
+    
+
+    
+    if (vector1.empty())//9 function
+    {
+        cout<<"the vector is empty"<<endl;
+    }
+    else
+    {
+        cout<<"The vector is not empty and the size is:"<<vector1.size()<<endl;//10 function
+        
+    }
+    cout<<"and the maximum size is :"<<vector1.max_size()<<endl;
+    cout<<"The vector begins with the element "; 
+    cout<<*vector1.begin()<<" and ends with the element ";
+    cout<<*vector1.rbegin()<<endl;
+    cout<<"after clearing:";
+    vector1.shrink_to_fit();
+    vector1.clear();
+    if (vector1.empty())//9 function
+    {
+        cout<<"the vector is empty"<<endl;
+    }
+    else
+    {
+        cout<<"The vector is not empty and the size is:"<<vector1.size()<<endl;//10 function
+        
+    }
+    return 0;
+}
+
