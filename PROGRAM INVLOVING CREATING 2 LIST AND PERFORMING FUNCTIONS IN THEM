@@ -1,0 +1,42 @@
+#include<iostream>
+#include<iterator>
+#include<list>
+using namespace std;
+void show (list<int> g)
+{
+    list<int>::iterator it;
+    for (it = g.begin();it!=g.end();++it)
+    {
+        cout<<*it<<"\t";
+    }
+    cout<<"\n"<<endl;
+}
+int main()
+{
+    list<int>l1,l2;
+    for ( int i = 0;i <5 ; ++i)
+    {
+        l1.push_back(i*2);
+        l2.push_front(i*3);
+    }
+    cout<<"the list 1 is :\t";
+    show(l1);
+    cout<<"the list 2 is :\t";
+    show(l2);
+    
+    l1.pop_back();
+    l1.pop_back();
+    
+    cout<<"the list 1 is :\t";
+    show(l1);
+    cout<<"the list 3 is :\t"; 
+    show(l2);
+    
+    cout<<"after swapping\t";
+    swap(l1,l2);
+    cout<<"the list 1 is :\t";  
+    show(l1);
+    cout<<"the list 2 is :\t"; 
+    show (l2);
+    return 0;
+}
