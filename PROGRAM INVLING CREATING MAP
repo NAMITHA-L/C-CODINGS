@@ -1,0 +1,26 @@
+#include <iostream>
+#include <map>
+using namespace std;
+int main()
+{
+    map <int , string > customer;
+    customer[100]="NITHYA";
+    customer[12]="VIJAY";
+    customer[145]="KUMAR";
+    customer[142]="SHIVA";
+    customer[200]="RAM";
+    cout<<"Is customer empty? (yes-1/no-0)"<<customer.empty()<<endl;
+    cout<<"customer at 12th place is :"<<customer.at(12)<<endl;
+    cout<<"Total number of customers:"<<customer.size()<<endl;
+   
+    customer.insert(pair<int,string>(205,"Sourabh"));
+
+    map <int, string>:: iterator p = customer.begin();
+    while(p!=customer.end())
+    {
+        cout<<p->first<<"\t"<<p->second<<endl;
+        p++;
+    }
+    
+    return 0;
+}
