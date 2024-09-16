@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+template<class t> class size
+{
+    public:
+    size(t a)
+    {
+        cout<<"the written element is:\t"<<a<<"\tand the size of the element is :"<<sizeof(a)<<endl;
+    }
+};
+int main()
+{
+    size <int> p(89);
+    size<char> q('h');
+    size<float> r(78.566789);
+    return 0;
+}
