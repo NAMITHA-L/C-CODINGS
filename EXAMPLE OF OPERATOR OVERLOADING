@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class test
+{
+    int num;
+    public:
+    test()
+    {
+        num = 8;
+    }
+    int operator ++ ()
+    {
+        num = num + 1;
+        return num;
+    }
+    void show()
+    {
+        cout<<"value is " <<num<<endl;
+    }
+};
+int main()
+{
+    test t ;
+    t.show();
+    ++ t;
+    t.show();
+    return 0;
+    
+}
