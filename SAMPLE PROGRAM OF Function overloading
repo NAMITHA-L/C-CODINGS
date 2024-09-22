@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+void fun(int a);
+void fun(int a ,int b);
+void fun(int a, double b);
+
+void fun(int a)
+{
+    cout<<a<<endl;
+}
+
+void fun(int a,int b)
+{
+    cout<<a<<b<<endl;
+}
+
+void fun(int a,double b)
+{
+    cout<<a<<b<<endl;
+}
+int main()
+{
+    fun(9);
+    fun(8,9);
+    fun(78,7.8);
+    return 0;
+}
+
