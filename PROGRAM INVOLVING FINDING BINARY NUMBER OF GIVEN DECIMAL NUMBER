@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class solution{
+    public:
+    int decimal(int num)
+    {
+        int temp=num;
+        int base=1;
+        int d=0;
+        while(temp)
+        {
+            int lastdigit=temp%10;
+            temp=temp/10;
+            
+            d += lastdigit * base;
+            base=base*2;
+        }
+        return d;
+    }
+};
+int main()
+{
+    solution s;
+    cout<<s.decimal(10101001);
+    return 0;
+    
+}
