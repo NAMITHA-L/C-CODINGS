@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a;
+    int b;
+    int c;
+    int d;
+    cout<<"Enter prinicipal:"<<endl;
+    cin>>a;
+    cout<<"Enter Rate of Interest:"<<endl;
+    cin>>b;
+    cout<<"Enter time in year:"<<endl;
+    cin>>c;
+    d = (a*b*c)/100;
+    cout<<"Simple Interest:"<<d<<endl;
+    return 0;
+}
+________________________________________
