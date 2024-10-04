@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int arr[5]={1,2,3,4,5};
+  cout<<"separate lines:"<<endl;
+  for(int i =0;i<5;i++)
+  {
+      cout<<arr[i]<<endl;
+  }
+  cout<<"in same line :\t";
+  for(int i =0;i<5;i++)
+  {
+      cout<<arr[i]<<"\t";
+  }
+    return 0;
+}
