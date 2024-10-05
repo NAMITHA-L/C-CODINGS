@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class Solution {
+public:
+    long long findSmallest(vector<int> &arr) {
+        int res = 1;  // Initialize result
+        
+        // Traverse the sorted array
+        for (int i = 0; i < arr.size(); i++) {
+            if (res < arr[i]) {
+                break;  // If arr[i] is greater than res, we cannot form res
+            } else {
+                res += arr[i];  // Otherwise, update res
+            }
+        }
+        
+        return res;  // Return the smallest number that cannot be formed
+    }
+};
+
+int main() {
+    Solution solution;
+    vector<int> arr = {1, 2, 3, 8};  // Example input
+
+    long long result = solution.findSmallest(arr);
+    cout << "The smallest positive integer that cannot be represented as the sum of any subset is: " << result << endl;
+
+    return 0;
+}
