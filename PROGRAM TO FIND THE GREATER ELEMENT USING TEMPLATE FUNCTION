@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+template < class X , class Y>
+Y big(X a, Y b)
+{
+    if (a>b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
+}
+int main()
+{
+   cout<<"the bigger element is"<< big(9,89.8)<<endl;;
+   cout<<"the bigger element is"<< big('a','n')<<endl;;
+    
+}
