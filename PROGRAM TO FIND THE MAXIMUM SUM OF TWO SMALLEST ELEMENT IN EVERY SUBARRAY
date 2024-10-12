@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>  // Include vector library
+using namespace std;
+
+class Solution
+{
+    public:
+    int pairWithMaxSum(vector<int>& arr) 
+    {
+        if(arr.size() < 2) return -1;  
+        int maxSum = arr[0] + arr[1];  
+     
+        for(int i = 1; i < arr.size() - 1; i++) {
+            int currentSum = arr[i] + arr[i + 1];  
+            if(currentSum > maxSum) {
+                maxSum = currentSum;  
+            }
+        }
+    
+        return maxSum;
+    }
+};
+
+int main()
+{
+    Solution s;
+    
+    // Create a vector of integers
+    vector<int> arr = {4, 3, 1, 5, 6};
+    
+    // Call the function and print the result
+    cout << s.pairWithMaxSum(arr) << endl;  // Expected output: 11
+
+    return 0;
+}
