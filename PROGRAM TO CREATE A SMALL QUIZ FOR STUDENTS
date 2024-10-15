@@ -1,0 +1,79 @@
+#include <iostream>
+#include<string>
+using namespace std;
+class exercise
+{
+public:
+int b;
+int c;
+string d;
+string e1;
+string f;
+float m;
+	void quiz()
+	{
+			        cout<<" write everything in small letter as quiz is case sensitive "<<endl;
+    				cout<<" Question 1) What is 5 + 7 ?"<<endl;
+    				cin>>b;
+    				cout << " Question 2) What is 5 - 7 ?"<<endl;
+    				cin>>c;
+    				cout << " Question 3) Which animal sounds like is 'Meow' ?"<<endl;
+    				cin>>d;
+    				cin.ignore();
+    		     	cout << " Question 4) What are the three primary colors ?"<<endl;
+    			    getline(cin,e1);
+    				cout << " Question 5) Where do you live curenntly ?"<<endl;
+    	            cin>>f;
+	}
+	 void percentage()
+	{
+	    int count = 0;
+	    { 
+			      if ( b == 12) count ++;
+			      if ( c == -2)count ++;
+			      if ( d == "cat" ) count ++;
+			      if ( e1 == "blue green red" || e1 == "green red blue" ||e1 == "red blue green" ) count ++;
+			      if ( f == "india" ) count ++;
+	    }
+	   cout<<"Your score is:"<<count;
+	   m = (count / 5.0) * 100;
+	   cout<<"\n Your precentage is:"<<m<<"%"<<endl;
+	}
+};
+
+int main()
+{
+  exercise e;
+  cout<<"If you are done with the assignment only you can give attempt to quiz ! \n "<<endl;
+  cout << "Answer should be in small letters \n yes / no"<<endl;
+  string g;
+  cin>>g;
+  
+  
+  if (g == "no")
+			cout<<"Please do it first !"<<endl;
+  else if ( g == "yes")
+		{
+			cout<<"Are you to ready to start ?"<<endl;
+    		cout <<   " yes / no"<<endl;
+    		string a;
+    		cin>>a;
+    		if (a == "yes")
+    			{
+			      e.quiz();
+    			  cout<<"Do you want to see the percentage ? "<<endl;
+    			  string h;
+    			  cin>>h;
+    			    if ( h == "yes")
+    			       e.percentage();
+    			      
+    			    else
+    			    {
+    			        cout<<"Thanks for Attending the quiz"<<endl;
+    			    }
+			     }
+			}
+			
+return 0;
+}
+
