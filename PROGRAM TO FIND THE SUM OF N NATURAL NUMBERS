@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class Solution {
+public:
+    long long seriesSum(int n) {
+        // Using the formula n * (n + 1) / 2
+        return (long long)n * (n + 1) / 2;
+    }
+};
+
+int main() {
+    Solution solution;
+    
+    // Example input
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    // Calculate the sum
+    long long result = solution.seriesSum(n);
+    
+    // Display the result
+    cout << "The sum of the series from 0 to " << n << " is: " << result << endl;
+
+    return 0;
+}
