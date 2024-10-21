@@ -1,0 +1,25 @@
+#include <unordered_map>
+#include <vector>
+
+class Solution {
+  public:
+    vector<int> subarraySum(vector<int> &arr, int target) {
+        unordered_map<int, int> sumMap;  
+        vector<int> result;
+        int cumulativeSum = 0;
+         sumMap[0] = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+            cumulativeSum += arr[i];
+             if (sumMap.find(cumulativeSum - target) != sumMap.end()) {
+                result.push_back(sumMap[cumulativeSum - target] + 1); 
+                result.push_back(i + 1); 
+                return result;
+            }
+            
+            // Store the cumulative sum and the current index
+            sumMap[cumulativeSum] = i + 1;  
+        }
+    return {-1};
+    }
+};
