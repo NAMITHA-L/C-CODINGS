@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+
+    Node(int x) {
+        data = x;
+        next = nullptr;
+    }
+};
+
+
+int sumOfLastN_Nodes(Node* head, int n) {
+    if (!head) return 0;  // If the list is empty
+
+    Node* temp = head;
+    int totalNodes = 0;
+
+   
+    while (temp) {
+        totalNodes++;
+        temp = temp->next;
+    }
+
+    if (n > totalNodes) {
+        return -1;  
+    }
+
+    // Second pass: Move to the (totalNodes - n)th node
+    int skipNodes = totalNodes - n;
+    temp = head;
+    while (skipNodes > 0) {
+        temp = temp->next;
+        skipNodes--;
+    }
+
+    
+    int sum = 0;
+    while (temp) {
+        sum += temp->data;
+        temp = temp->next;
+    }
+
+    return sum;
+}
+
+
+Node* createNode(int data) {
+    return new Node(data);  
+}
+
+int main() {
+    Node* head = createNode(10);
+    head->next = createNode(20);
+    head->next->next = createNode(30);
+    head->next->next->next = createNode(40);
+    head->next->next->next->next = createNode(50);
+
+    int n = 3;
+    cout << "Sum of last " << n << " nodes: " << sumOfLastN_Nodes(head, n) << endl;
+
+    return 0;
+}
