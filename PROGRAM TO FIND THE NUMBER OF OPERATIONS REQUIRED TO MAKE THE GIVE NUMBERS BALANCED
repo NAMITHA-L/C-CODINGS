@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>  
+#include <algorithm>  
+
+using namespace std;
+
+class Solution {
+public:
+    long long minOps(long long a, long long b, long long c) {
+       
+        long long ops1 = abs((a + b) - 2 * c);  
+        long long ops2 = abs((a + c) - 2 * b); 
+        long long ops3 = abs((b + c) - 2 * a);  
+        return (min({ops1, ops2, ops3}) + 1) / 2;
+    }
+};
+
+int main() {
+    Solution sol;
+    long long a = 4, b = 10, c = 5;
+    cout << sol.minOps(a, b, c) << endl;  // Expected output: 2
+    return 0;
+}
