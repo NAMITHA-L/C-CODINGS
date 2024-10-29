@@ -1,0 +1,22 @@
+#include <algorithm>  
+#include <vector>
+#include <iostream>  
+
+using namespace std;
+
+class Solution {
+public:
+    int kthSmallest(vector<int>& arr, int k) {
+        sort(arr.begin(), arr.end());
+         return arr[k - 1];
+    }
+};
+
+int main() {
+    vector<int> arr = {7, 10, 4, 3, 20, 15}; 
+    int k = 3;                               
+    Solution sol;
+    int result = sol.kthSmallest(arr, k);
+    cout << "The " << k << "-th smallest element is: " << result << endl;
+    return 0;
+}
