@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Solution {
+  public:
+    string removeDups(string s) {
+        bool seen[256] = {false}; 
+        string result = "";   // Resultant string without duplicates
+           for (char ch : s) 
+            if (!seen[ch]) {
+                result += ch;
+                seen[ch] = true;  
+            }
+        }
+
+        return result;
+    }
+};
+
+int main() {
+    Solution sol;
+    
+    // Test case 1
+    string s1 = "nami";
+    cout << "Input: " << s1 << "\nOutput: " << sol.removeDups(s1) << endl;
+
+    // Test case 2
+    string s2 = "malayalam";
+    cout << "Input: " << s2 << "\nOutput: " << sol.removeDups(s2) << endl;
+
+    return 0;
+}
