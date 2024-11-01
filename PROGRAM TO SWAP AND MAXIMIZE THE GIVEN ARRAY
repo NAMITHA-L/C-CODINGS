@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+int maxSumOfAbsoluteDifferences(vector<int>& arr) {
+    vector<int> arr1;
+    sort(arr.begin(), arr.end());
+    int n = arr.size(), count = 0;
+
+    int left = 0, right = n - 1;
+    while (left <= right) {
+        if (left != right) {
+            arr1.push_back(arr[left++]);
+            arr1.push_back(arr[right--]);
+        } else {
+            arr1.push_back(arr[left++]);
+        }
+    }
+
+    for (int i = 0; i < n - 1; i++) {
+        count += abs(arr1[i] - arr1[i + 1]);
+    }
+    count += abs(arr1[n - 1] - arr1[0]);
+
+    return count;
+}
+
+int main() {
+    vector<int> arr = {4, 2, 1, 8};
+    cout << maxSumOfAbsoluteDifferences(arr) << endl;
+    return 0;
+}
