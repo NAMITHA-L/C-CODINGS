@@ -1,0 +1,11 @@
+from datetime import date
+def agecount(birthdate):
+  today=date.today()
+  age=today.year-birthdate.year-((today.month,today.day)<(birthday.month,birthday.day))
+  return age
+yr=int(input("enter the birth year: "))
+mnth=int(input("Enter the birth month: "))
+day=int(input("Enter the birth date: "))
+birthday=date(yr,mnth,day)
+age=agecount(birthday)
+print(f"Your age is {age}")
