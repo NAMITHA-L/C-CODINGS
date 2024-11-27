@@ -1,0 +1,15 @@
+def bmichecker(h,w):
+    h=h/100
+    B= w/(h*h)
+    if B <= 18:
+        print("YOU ARE UNDERWEIGHT")
+    elif 18 <=B<24.9:
+        print("YOU ARE NORMAL")
+    elif 25 <= B <39.9:
+        print("YOU ARE OVERWEIGHT")
+    elif B >= 40:
+        print("YOU ARE OBESE")
+
+h=float(input("ENTER YOUR HEIGHT: "))
+w=float(input("ENTER YOUR WEIGHT: "))
+bmichecker(h,w)
