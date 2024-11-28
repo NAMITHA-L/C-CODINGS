@@ -1,0 +1,8 @@
+def totalcost(a):
+    tax=int(input("TAX AMOUNT: "))
+    tips=int(input("TIP AMOUNT IN PERCENTAGE(if any): "))
+    total_value= tax+a+((tips/100) * a)
+    print(f"THE TOTAL AMOUNT TO BE PAID IS:{total_value}")
+a=int(input("ENTER THE ACTUAL AMOUNT:"))
+totalcost(a)
+    
